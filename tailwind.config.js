@@ -5,8 +5,11 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
 
-  theme: {
-
+  theme: {},
+  variants: {
+    extend: {
+      visibility: ['group-hover'],
+    },
   },
   plugins: [],
 };

@@ -15,11 +15,11 @@ const Navbar: React.FC<INavbar> = () => {
   return (
     <div className="w-full">
       <div className="sm:flex items-center justify-between bg-black py-4 px-4">
-        <div className="bg-black font-bold cursor-pointer flex items-center text-white">
+        <div className="bg-black font-bold cursor-pointer flex items-center">
           <Link href="/">
             <span
               onClick={() => setOpen(!open ? open : !open)}
-              className="hover:text-gray-500 duration-500 text-xl text-white"
+              className="hover:text-gray-500 duration-50 text-xl text-white mr-5"
             >
               FREE THE YOUTH
             </span>
@@ -46,7 +46,7 @@ const Navbar: React.FC<INavbar> = () => {
               <Link href={link.link}>
                 <div
                   onClick={() => setOpen(!open)}
-                  className="cursor-pointer hover:text-gray-500 duration-500"
+                  className="cursor-pointer hover:text-gray-500 duration-50"
                 >
                   {link.name}
                 </div>

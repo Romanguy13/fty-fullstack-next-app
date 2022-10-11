@@ -4,5 +4,11 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": true
+  },
+  "files.associations": {
+    "*.js": "javascriptreact",
+    "*.env.development": "env",
+    "*.env.production": "env",
+    "*.env.local": "env"
   }
 }
