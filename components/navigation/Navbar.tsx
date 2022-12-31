@@ -19,7 +19,7 @@ const Navbar: React.FC<INavbar> = () => {
           <Link href="/">
             <span
               onClick={() => setOpen(!open ? open : !open)}
-              className="hover:text-gray-500 duration-50 text-xl text-white mr-5"
+              className="hover:text-gray-500 duration-50 text-2xl text-white mr-5"
             >
               FREE THE YOUTH
             </span>
@@ -41,7 +41,7 @@ const Navbar: React.FC<INavbar> = () => {
           {Links.map((link) => (
             <li
               key={link.name}
-              className="bg-black text-right text-white sm:ml-8 text-xl py-4 sm:py-0"
+              className="bg-black text-right text-white sm:ml-8 text-2xl py-4 sm:py-0"
             >
               <Link href={link.link}>
                 <div
