@@ -22,7 +22,7 @@ const ArtistPage: NextPageWithLayout = ({ artist }: Props) => {
               alt="artist photo"
             />
           </div>
-          <article>
+          <article className="p-4">
             <h1 className="text-2xl text-left my-4 font-bold">
               {artist.title}
             </h1>

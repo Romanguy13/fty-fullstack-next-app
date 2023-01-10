@@ -20,7 +20,7 @@ const Artists: NextPageWithLayout = ({ artists }: Props) => {
               <div className="md:w-8/12 xl:w-6/12 bg-white self-center md:m-4 group border-2 border-gray-200 shadow-sm cursor-pointer w-full">
                 <div className="border-b-2 border-gray-200 bg-white relative pb-2/3 overflow-hidden">
                   <img
-                    className="group-hover:scale-105 duration-100 ease-in-out absolute w-full object-cover"
+                    className="scale-110 group-hover:scale-105 duration-100 ease-in-out absolute w-full object-cover"
                     src={urlFor(artist.mainImage).url()!}
                     alt="artist photo"
                   />
