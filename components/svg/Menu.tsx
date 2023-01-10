@@ -9,7 +9,7 @@ const Menu: React.FC<IMenu> = () => {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="w-6 h-6 hover:text-gray-500 duration-50"
+        className="w-10 h-10 hover:text-gray-500 duration-50"
       >
         <path
           strokeLinecap="round"

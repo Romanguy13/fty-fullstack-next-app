@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Footer from '../navigation/Footer';
 import Navbar from '../navigation/Navbar';
 
 export interface ILayout {
@@ -11,8 +12,11 @@ const Layout: React.FC<ILayout> = ({ children }) => {
       <Head>
         <title>FTY APP</title>
       </Head>
-      <Navbar />
-      <main>{children}</main>
+      <div className="flex flex-col h-screen justify-between">
+        <Navbar />
+        <main className="mb-10">{children}</main>
+        <Footer />
+      </div>
     </>
   );
 };
