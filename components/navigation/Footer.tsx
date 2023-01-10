@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 /* eslint-disable @next/next/no-img-element */
 export interface IFooter {}
 
@@ -56,12 +58,12 @@ const Footer: React.FC<IFooter> = () => {
                 </a>
               </li>
               <li className="mb-2">
-                <a
+                <Link
                   href="/develop"
                   className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800"
                 >
                   {linkText}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
