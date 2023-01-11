@@ -14,7 +14,7 @@ const ArtistPage: NextPageWithLayout = ({ artist }: Props) => {
   return (
     <main>
       {artist && (
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto md:mt-4">
           <div className="pb-2/3 relative overflow-hidden">
             <img
               className="absolute top-0 w-full object-cover"
