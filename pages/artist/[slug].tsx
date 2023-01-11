@@ -26,7 +26,7 @@ const ArtistPage: NextPageWithLayout = ({ artist }: Props) => {
             <h1 className="text-2xl text-left my-4 font-bold">
               {artist.title}
             </h1>
-            <p className="text-lg text-left">{artist.city.title}</p>
+            <p className="text-lg text-left mb-2">{artist.city.title}</p>
             <div className="mb-20">
               <PortableText
                 dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
