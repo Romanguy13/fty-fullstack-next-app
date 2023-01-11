@@ -17,22 +17,26 @@ const Read: NextPageWithLayout = ({ posts }: Props) => {
         {posts &&
           posts.map((post) => (
             <Link key={post._id} href={`/post/${post.slug.current}`}>
-              <div className="md:w-8/12 xl:w-6/12 bg-white self-center md:m-4 group border-2 border-gray-200 shadow-sm cursor-pointer w-full">
-                <div className="border-b-2 border-gray-200 bg-white relative pb-2/3 overflow-hidden">
+              <div className="md:w-8/12 xl:w-6/12 bg-black self-center md:m-4 group border-2 border-black shadow-sm cursor-pointer w-full">
+                <div className="bg-black relative pb-2/3 overflow-hidden">
                   <img
-                    className="group-hover:scale-105 duration-100 ease-in-out absolute w-full object-cover"
+                    className="scale-125 group-hover:scale-110 duration-100 ease-in-out absolute w-full object-cover"
                     src={urlFor(post.mainImage).url()!}
                     alt="post photo"
                   />
                 </div>
-                <div className="flex justify-between bg-white m-4 items-center">
-                  <h3 className="text-left font-bold text-lg">{post.title}</h3>
+                <div className="flex justify-between bg-black p-2 items-center">
+                  <h3 className="text-left font-bold text-lg text-white">
+                    {post.title}
+                  </h3>
                   <div className="flex items-center">
-                    <p className="mr-2 text-bold">{post.author.name}</p>
+                    <p className="mr-2 text-bold text-white">
+                      {post.author.name}
+                    </p>
                     <img
                       src={urlFor(post.author.image).url()!}
                       alt="author logo"
-                      className="h-10 w-10 rounded-full border-gray border-2"
+                      className="h-10 w-10 rounded-full border-black border-2"
                     />
                   </div>
                 </div>

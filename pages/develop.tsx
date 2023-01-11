@@ -32,16 +32,15 @@ const Develop: NextPageWithLayout = () => {
               id="console"
             >
               <p className="pb-1">Last login: {new Date().toDateString()}</p>
-              <p className="pb-1">fty@media application % credits</p>
-              <br />
-              <p className="pb-1">author: Cody Lambert</p>
+              <p className="pb-1">fty@media /application % credits</p>
               <br />
               <p className="pb-1">contributors:</p>
+              <p className="pb-1">Cody Lambert -&gt; Source Code</p>
               <p className="pb-1">Carter Lynch -&gt; Source Code</p>
               <p className="pb-1">Michael Martin -&gt; Design and Data</p>
               <p className="pb-1">Sully Graham -&gt; Design and Data</p>
               <br />
-              <p className="pb-1">fty@media application % </p>
+              <p className="pb-1">fty@media /application % </p>
             </div>
           </div>
         </div>

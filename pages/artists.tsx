@@ -17,16 +17,16 @@ const Artists: NextPageWithLayout = ({ artists }: Props) => {
         {artists &&
           artists.map((artist) => (
             <Link key={artist._id} href={`/artist/${artist.slug.current}`}>
-              <div className="md:w-8/12 xl:w-6/12 bg-white self-center md:m-4 group border-2 border-gray-200 shadow-sm cursor-pointer w-full">
-                <div className="border-b-2 border-gray-200 bg-white relative pb-2/3 overflow-hidden">
+              <div className="md:w-8/12 xl:w-6/12 bg-black self-center md:m-4 group border-2 border-black shadow-sm cursor-pointer w-full">
+                <div className="bg-black relative pb-2/3 overflow-hidden">
                   <img
-                    className="scale-110 group-hover:scale-105 duration-100 ease-in-out absolute w-full object-cover"
+                    className="scale-125 group-hover:scale-110 duration-100 ease-in-out absolute w-full object-cover"
                     src={urlFor(artist.mainImage).url()!}
                     alt="artist photo"
                   />
                 </div>
-                <div className="flex justify-between bg-white m-4 items-center">
-                  <h3 className="text-left font-bold text-lg">
+                <div className="flex justify-between bg-black p-2 items-center">
+                  <h3 className="text-left font-bold text-2xl text-white">
                     {artist.title}
                   </h3>
                 </div>

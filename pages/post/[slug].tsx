@@ -14,13 +14,13 @@ const PostPage: NextPageWithLayout = ({ post }: Props) => {
   return (
     <main>
       {post && (
-        <div className="max-w-4xl mx-auto p-4">
+        <div className="max-w-4xl mx-auto">
           <img
-            className="w-full border-2 border-gray"
+            className="w-full"
             src={urlFor(post.mainImage).url()!}
             alt="post photo"
           />
-          <article>
+          <article className="p-2">
             <h1 className="text-2xl text-left my-4">{post.title}</h1>
             <p>
               Published on {new Date(post.publishedAt).toLocaleDateString()}

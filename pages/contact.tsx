@@ -6,8 +6,8 @@ import type { NextPageWithLayout } from './_app';
 
 const Contact: NextPageWithLayout = () => {
   return (
-    <section className="px-8">
-      <div className="max-w-screen-lg mt-8 px-8 grid grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 py-10 mx-auto bg-gray-100 text-gray-800 rounded-sm">
+    <section className="px-2">
+      <div className="max-w-screen-lg mt-2 lg:mt-8 px-8 grid grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 py-10 mx-auto bg-gray-100 text-gray-800 rounded-sm">
         <div className="flex flex-col">
           <div className="text-center">
             <h2 className="text-3xl font-bold pb-5">CONTACT US</h2>
