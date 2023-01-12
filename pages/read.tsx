@@ -36,11 +36,16 @@ const Read: NextPageWithLayout = ({ posts }: Props) => {
                     <p className="mr-2 text-bold text-white">
                       {post.author.name}
                     </p>
-                    <img
-                      src={urlFor(post.author.image).url()!}
-                      alt="author logo"
-                      className="h-10 w-10 rounded-full"
-                    />
+                    <div className="relative h-10 w-10">
+                      <Image
+                        src={urlFor(post.author.image).url()!}
+                        alt="Author Photo"
+                        width="1600"
+                        height="1000"
+                        layout="fill"
+                        className="rounded-full"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>

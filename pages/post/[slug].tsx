@@ -15,7 +15,7 @@ const PostPage: NextPageWithLayout = ({ post }: Props) => {
   return (
     <main>
       {post && (
-        <div className="max-w-4xl mx-auto md:mt-4">
+        <div className="max-w-4xl mx-auto lg:mt-4">
           <Image
             width="1600"
             height="1000"
@@ -23,19 +23,22 @@ const PostPage: NextPageWithLayout = ({ post }: Props) => {
             src={urlFor(post.mainImage).url()!}
             alt="post photo"
           />
-          <article className="p-4">
+          <article className="p-4 xl:p-0">
             <h1 className="text-2xl text-left my-4 font-bold">{post.title}</h1>
             <p>
               Published on {new Date(post.publishedAt).toLocaleDateString()}
             </p>
             <div className="flex items-center space-x-2 my-4">
-              <Image
-                width="1600"
-                height="1000"
-                className="h-12 w-12 rounded-full"
-                src={urlFor(post.author.image).url()!}
-                alt="author photo"
-              />
+              <div className="relative h-10 w-10">
+                <Image
+                  width="1600"
+                  height="1000"
+                  layout="fill"
+                  className="rounded-full"
+                  src={urlFor(post.author.image).url()!}
+                  alt="author photo"
+                />
+              </div>
               <p>{post.author.name}</p>
             </div>
             <div className="mb-20">

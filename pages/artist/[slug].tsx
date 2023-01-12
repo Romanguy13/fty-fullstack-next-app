@@ -16,13 +16,17 @@ const ArtistPage: NextPageWithLayout = ({ artist }: Props) => {
     <main>
       <div className="flex flex-col">
         {artist && (
-          <div className="xl:border-2 xl:border-black max-w-4xl xl:max-w-6xl mx-auto md:mt-4 xl:my-10 flex flex-col xl:flex-row xl:mt-20">
+          <div className="xl:border-2 xl:border-black max-w-4xl xl:max-w-6xl mx-auto lg:mt-4 xl:my-10 flex flex-col xl:flex-row xl:mt-20">
             <div className="flex flex-col relative xl:m-4 xl:w-full">
-              <h1 className="text-2xl text-left my-2 font-bold">
-                {artist.title}
-              </h1>
-              <p className="text-lg text-left mb-2">{artist.city.title}</p>
-              <div className="pb-2/3 xl:pb-0">
+              <div className="xl:visible h-0 xl:h-full invisible">
+                <h1 className="text-2xl text-left my-2 font-bold px-4 md:p-0">
+                  {artist.title}
+                </h1>
+                <p className="text-lg text-left mb-2 px-4 md:p-0">
+                  {artist.city.title}
+                </p>
+              </div>
+              <div className="">
                 <Image
                   width="1600"
                   height="1000"
@@ -32,11 +36,13 @@ const ArtistPage: NextPageWithLayout = ({ artist }: Props) => {
                 />
               </div>
             </div>
-            <article className="p-4 md:p-0 xl:w-full xl:m-4 self-center">
-              {/* <h1 className="text-2xl text-left my-4 font-bold">
-                {artist.title}
-              </h1> */}
-              {/* <p className="text-lg text-left mb-2">{artist.city.title}</p> */}
+            <article className="p-4 lg:p-0 xl:w-full xl:m-4 xl:self-center">
+              <div className="xl:invisible">
+                <h1 className="text-2xl text-left mb-4 font-bold">
+                  {artist.title}
+                </h1>
+                <p className="text-lg text-left mb-2">{artist.city.title}</p>
+              </div>
               <div className="">
                 <PortableText
                   dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
