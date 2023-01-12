@@ -28,7 +28,7 @@ const Artists: NextPageWithLayout = ({ artists }: Props) => {
                     alt="artist photo"
                   />
                 </div>
-                <div className="flex justify-between bg-black p-2 py-4 items-center">
+                <div className="flex justify-around bg-black p-2 items-center">
                   <h3 className="text-left font-bold text-2xl text-white">
                     {artist.title}
                   </h3>

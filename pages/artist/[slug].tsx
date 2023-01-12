@@ -39,7 +39,7 @@ const ArtistPage: NextPageWithLayout = ({ artist }: Props) => {
               </div>
             </div>
             <article className="p-4 lg:p-0 xl:w-full xl:m-4 xl:self-center">
-              <div className="xl:invisible">
+              <div className="xl:invisible xl:h-0 h-full">
                 <h1 className="text-2xl text-left mb-4 font-bold">
                   {artist.title}
                 </h1>
