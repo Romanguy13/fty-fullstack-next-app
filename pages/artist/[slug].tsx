@@ -22,9 +22,6 @@ const ArtistPage: NextPageWithLayout = ({ artist }: Props) => {
                 <h1 className="text-2xl text-left my-2 font-bold px-4 md:p-0">
                   {artist.title}
                 </h1>
-                <p className="text-lg text-left mb-2 px-4 md:p-0">
-                  {artist.city.title}
-                </p>
               </div>
               <div className="">
                 <Image
@@ -34,6 +31,11 @@ const ArtistPage: NextPageWithLayout = ({ artist }: Props) => {
                   src={urlFor(artist.mainImage).url()!}
                   alt="artist photo"
                 />
+              </div>
+              <div className="xl:visible h-0 xl:h-full invisible">
+                <p className="text-lg text-left mb-2 px-4 md:p-0">
+                  {artist.city.title}
+                </p>
               </div>
             </div>
             <article className="p-4 lg:p-0 xl:w-full xl:m-4 xl:self-center">
