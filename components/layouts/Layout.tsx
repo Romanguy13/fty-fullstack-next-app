@@ -12,7 +12,7 @@ const Layout: React.FC<ILayout> = ({ children }) => {
       <Head>
         <title>FTY APP</title>
       </Head>
-      <div className="flex flex-col h-screen justify-between">
+      <div className="flex flex-col justify-between">
         <Navbar />
         <main className="mb-10">{children}</main>
         <Footer />

@@ -25,7 +25,7 @@ const Read: NextPageWithLayout = ({ posts }: Props) => {
                     alt="post photo"
                   />
                 </div>
-                <div className="flex justify-between bg-black p-2 items-center">
+                <div className="flex justify-between bg-black p-2 py-4 items-center">
                   <h3 className="text-left font-bold text-lg text-white">
                     {post.title}
                   </h3>

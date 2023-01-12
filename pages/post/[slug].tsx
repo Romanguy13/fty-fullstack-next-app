@@ -21,7 +21,7 @@ const PostPage: NextPageWithLayout = ({ post }: Props) => {
             alt="post photo"
           />
           <article className="p-4">
-            <h1 className="text-2xl text-left my-4">{post.title}</h1>
+            <h1 className="text-2xl text-left my-4 font-bold">{post.title}</h1>
             <p>
               Published on {new Date(post.publishedAt).toLocaleDateString()}
             </p>

@@ -13,35 +13,46 @@ interface Props {
 const ArtistPage: NextPageWithLayout = ({ artist }: Props) => {
   return (
     <main>
-      {artist && (
-        <div className="max-w-4xl mx-auto md:mt-4">
-          <div className="pb-2/3 relative overflow-hidden">
-            <img
-              className="absolute top-0 w-full object-cover"
-              src={urlFor(artist.mainImage).url()!}
-              alt="artist photo"
-            />
-          </div>
-          <article className="p-4">
-            <h1 className="text-2xl text-left my-4 font-bold">
-              {artist.title}
-            </h1>
-            <p className="text-lg text-left mb-2">{artist.city.title}</p>
-            <div className="mb-20">
-              <PortableText
-                dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
-                projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
-                content={artist.body}
-                serializers={{
-                  h1: (props: any) => (
-                    <h1 className="text-2xl font-bold my-5" {...props} />
-                  ),
-                }}
-              />
+      <div className="flex flex-col">
+        {artist && (
+          <div className="xl:border-2 xl:border-black max-w-4xl xl:max-w-6xl mx-auto md:mt-4 xl:my-10 flex flex-col xl:flex-row xl:mt-20">
+            <div className="flex flex-col relative xl:m-4 xl:w-full">
+              <h1 className="text-2xl text-left my-2 font-bold">
+                {artist.title}
+              </h1>
+              <p className="text-lg text-left mb-2">{artist.city.title}</p>
+              <div className="pb-2/3 xl:pb-0">
+                <img
+                  className="top-0 w-full object-cover"
+                  src={urlFor(artist.mainImage).url()!}
+                  alt="artist photo"
+                />
+              </div>
             </div>
-          </article>
-        </div>
-      )}
+            <article className="p-4 md:p-0 xl:w-full xl:m-4 self-center">
+              {/* <h1 className="text-2xl text-left my-4 font-bold">
+                {artist.title}
+              </h1> */}
+              {/* <p className="text-lg text-left mb-2">{artist.city.title}</p> */}
+              <div className="">
+                <PortableText
+                  dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
+                  projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
+                  content={artist.body}
+                  serializers={{
+                    h1: (props: any) => (
+                      <h1 className="text-2xl font-bold my-5" {...props} />
+                    ),
+                    h4: (props: any) => (
+                      <h1 className="text-xl font-bold my-5" {...props} />
+                    ),
+                  }}
+                />
+              </div>
+            </article>
+          </div>
+        )}
+      </div>
     </main>
   );
 };

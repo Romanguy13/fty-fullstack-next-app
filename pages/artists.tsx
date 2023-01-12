@@ -13,11 +13,11 @@ interface Props {
 const Artists: NextPageWithLayout = ({ artists }: Props) => {
   return (
     <section>
-      <div className="mx-auto text-center flex flex-col">
+      <div className="mx-auto text-center flex flex-col md:flex-row md:justify-center md:flex-wrap">
         {artists &&
           artists.map((artist) => (
             <Link key={artist._id} href={`/artist/${artist.slug.current}`}>
-              <div className="md:w-8/12 xl:w-6/12 bg-black self-center md:m-4 group shadow-sm cursor-pointer w-full">
+              <div className="md:w-5/12 lg:w-3/12 bg-black self-center md:m-2 lg:m-4 group shadow-sm cursor-pointer w-full">
                 <div className="bg-black relative pb-2/3 overflow-hidden">
                   <img
                     className="scale-125 group-hover:scale-110 duration-100 ease-in-out absolute w-full object-cover"
@@ -25,7 +25,7 @@ const Artists: NextPageWithLayout = ({ artists }: Props) => {
                     alt="artist photo"
                   />
                 </div>
-                <div className="flex justify-between bg-black p-2 items-center">
+                <div className="flex justify-between bg-black p-2 py-4 items-center">
                   <h3 className="text-left font-bold text-2xl text-white">
                     {artist.title}
                   </h3>
