@@ -88,7 +88,11 @@ const Footer: React.FC<IFooter> = () => {
                 href="https://open.spotify.com/playlist/0C0lAkSWHW6f6joaHWdjbR?si=19c0100537bd465b"
                 className="w-10 h-10 border border-2 border-gray-400 rounded-full text-center hover:bg-blue-600 hover:border-blue-600"
               >
-                <img className="" src="/spotify.png" alt="spotify logo" />
+                <img
+                  className="scale-110"
+                  src="/spotify.png"
+                  alt="spotify logo"
+                />
               </a>
             </div>
           </div>

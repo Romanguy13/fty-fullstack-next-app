@@ -36,4 +36,6 @@ export interface Artist {
     };
   };
   body: [object];
+  ig: string;
+  spotify: string;
 }
