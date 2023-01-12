@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { GetStaticProps } from 'next';
+import Image from 'next/image';
 import PortableText from 'react-portable-text';
 import Layout from '../../components/layouts/Layout';
 import { sanityClient, urlFor } from '../../sanity';
@@ -15,7 +16,9 @@ const PostPage: NextPageWithLayout = ({ post }: Props) => {
     <main>
       {post && (
         <div className="max-w-4xl mx-auto md:mt-4">
-          <img
+          <Image
+            width="1600"
+            height="1000"
             className="w-full"
             src={urlFor(post.mainImage).url()!}
             alt="post photo"
@@ -26,7 +29,9 @@ const PostPage: NextPageWithLayout = ({ post }: Props) => {
               Published on {new Date(post.publishedAt).toLocaleDateString()}
             </p>
             <div className="flex items-center space-x-2 my-4">
-              <img
+              <Image
+                width="1600"
+                height="1000"
                 className="h-12 w-12 rounded-full"
                 src={urlFor(post.author.image).url()!}
                 alt="author photo"

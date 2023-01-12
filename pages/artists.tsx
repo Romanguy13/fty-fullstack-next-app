@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { GetServerSideProps } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '../components/layouts/Layout';
 import { sanityClient, urlFor } from '../sanity';
@@ -17,9 +18,11 @@ const Artists: NextPageWithLayout = ({ artists }: Props) => {
         {artists &&
           artists.map((artist) => (
             <Link key={artist._id} href={`/artist/${artist.slug.current}`}>
-              <div className="md:w-5/12 lg:w-3/12 bg-black self-center md:m-2 lg:m-4 group shadow-sm cursor-pointer w-full">
-                <div className="bg-black relative pb-2/3 overflow-hidden">
-                  <img
+              <div className="md:w-5/12 lg:w-3/12 bg-black self-center md:m-2 lg:m-4 group shadow-sm cursor-pointer h-full">
+                <div className="bg-black relative pb-0 overflow-hidden">
+                  <Image
+                    width="1600"
+                    height="1000"
                     className="scale-125 group-hover:scale-110 duration-100 ease-in-out absolute w-full object-cover"
                     src={urlFor(artist.mainImage).url()!}
                     alt="artist photo"

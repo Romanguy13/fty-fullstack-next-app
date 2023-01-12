@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { GetStaticProps } from 'next';
+import Image from 'next/image';
 import PortableText from 'react-portable-text';
 import Layout from '../../components/layouts/Layout';
 import { sanityClient, urlFor } from '../../sanity';
@@ -22,7 +23,9 @@ const ArtistPage: NextPageWithLayout = ({ artist }: Props) => {
               </h1>
               <p className="text-lg text-left mb-2">{artist.city.title}</p>
               <div className="pb-2/3 xl:pb-0">
-                <img
+                <Image
+                  width="1600"
+                  height="1000"
                   className="top-0 w-full object-cover"
                   src={urlFor(artist.mainImage).url()!}
                   alt="artist photo"
