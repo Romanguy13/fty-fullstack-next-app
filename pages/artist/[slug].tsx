@@ -16,7 +16,7 @@ const ArtistPage: NextPageWithLayout = ({ artist }: Props) => {
     <main>
       <div className="flex flex-col">
         {artist && (
-          <div className="xl:border-2 xl:border-black max-w-4xl xl:max-w-6xl mx-auto lg:mt-4 xl:my-10 flex flex-col xl:flex-row xl:mt-20">
+          <div className="xl:border-2 xl:border-black bg-black text-white max-w-4xl xl:max-w-6xl mx-auto lg:mt-4 xl:my-10 flex flex-col xl:flex-row xl:mt-20">
             <div className="flex flex-col relative xl:m-4 xl:w-full">
               <div className="xl:visible h-0 xl:h-full invisible">
                 <h1 className="text-2xl text-left my-2 font-bold px-4 md:p-0">
