@@ -49,18 +49,15 @@ const ArtistPage: NextPageWithLayout = ({ artist }: Props) => {
                 {artist.ig && (
                   <a
                     href={artist.ig}
-                    className="xl:bg-blue-600 xl:border-blue-600 mr-2 w-12 h-12 border rounded-full text-center bg-white border-white hover:bg-white hover:border-white"
+                    className="xl:bg-blue-600 xl:border-blue-600 mr-2 w-12 h-12 border border-4 rounded-full text-center bg-white border-white hover:bg-white hover:border-white"
                   >
                     <img className="" src="/ig.png" alt="instagram logo" />
                   </a>
                 )}
                 {artist.spotify && (
-                  <a
-                    href={artist.spotify}
-                    className="mr-2 bg-white bg-blue-600 border-blue-600 xl:bg-blue-600 w-12 h-12 rounded-full text-center hover:bg-white hover:border-white"
-                  >
+                  <a href={artist.spotify} className="mr-2">
                     <img
-                      className="scale-110"
+                      className="bg-white border-2 border-white xl:border-blue-600 xl:bg-blue-600 w-12 h-12 rounded-full text-center hover:bg-white hover:border-white"
                       src="/spotify.png"
                       alt="spotify logo"
                     />
