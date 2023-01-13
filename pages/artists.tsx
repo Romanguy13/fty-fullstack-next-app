@@ -12,6 +12,8 @@ interface Props {
 }
 
 const Artists: NextPageWithLayout = ({ artists }: Props) => {
+  console.log(artists);
+  artists?.sort((a, b) => a.title.localeCompare(b.title));
   return (
     <section>
       <div className="mx-auto text-center flex flex-col md:flex-row md:justify-center md:flex-wrap">
